@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 import { ModalityPage } from '../modality/modality';
 
 /*
@@ -14,17 +14,13 @@ import { ModalityPage } from '../modality/modality';
   templateUrl: 'sphere.html'
 })
 export class SpherePage {
-  prescription: Number;
-  constructor(public navCtrl: NavController, public pLens: LensProvider) {}
-
+  constructor(public navCtrl: NavController, public lens: LensProvider) {}
   ionViewDidLoad() {
   }
-  calculate(){
-    this.navCtrl.push(ModalityPage);
-  }
-  dec(){this.pLens.dec()}
-  inc(){this.pLens.inc()}
-  decA(){this.pLens.decA()}
-  incA(){this.pLens.incA()}
+  calculateBtn(){this.navCtrl.push(ModalityPage)}
+  decL(){this.lens.decL()}
+  incL(){this.lens.incL()}
+  decR(){this.lens.decR()}
+  incR(){this.lens.incR()}
 
 }

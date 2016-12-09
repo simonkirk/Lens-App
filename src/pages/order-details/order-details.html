@@ -15,20 +15,16 @@
               Order Details
             </ion-list-header>
             <h4 style="text-weight: bold">Patient Reference</h4>
-            <p>{{pLens.patientRef}}</p>
-            <h4>Lens</h4>
-            <p>{{pLens.dailyDisponsableOptions}}</p>
-            <h4>Quantity</h4>
-            <p> N/A -> Demo </p>
-            <h4>Store</h4>
-            <p> N/A -> Demo </p>
-            <h4> Debug info beta/test </h4>
-            <p>Type: {{pLens.type}}</p>
-            <p>Modality: {{pLens.modality}}</p>
-            <p>Astigmatism: {{pLens.hasAstigmatism}}</p>
-            <p>Astigmatism Value: {{pLens.astigmatismValue}}</p>
-            <p>Prescription: {{pLens.prescription}}</p>
-            <h4> RX out: {{pLens.vertexAdjustedRx}} </h4>
+            <p>{{lens.patientRef}}</p>
+            <h4>Lens TYPE</h4>
+            <p>{{lens.lensType}}</p>
+            <h4>Prescription</h4>
+            <p> Left eye: {{lens.prescription.leftEye}} | Right eye: {{lens.prescription.rightEye}} </p>
+            <h4>Modality</h4>
+            <p> {{lens.lensModality}} </p>
+            <h4> Daily options </h4>
+            <p>{{lens.dailyDisponsableOptions}}</p>
+            <h4> RX out: {{lens.vertexAdjustedRx}} </h4>
       </ion-col>
     </ion-row>
   </ion-grid>

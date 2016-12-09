@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 import { OrderDetailsPage } from '../order-details/order-details';
 
 /*
@@ -14,12 +14,12 @@ import { OrderDetailsPage } from '../order-details/order-details';
   templateUrl: 'referal.html'
 })
 export class ReferalPage {
-  constructor(public navCtrl: NavController, public pLens: LensProvider) {}
+  constructor(public navCtrl: NavController, public lens: LensProvider) {}
 
   ionViewDidLoad() {}
 
   finish(){
-    this.pLens.calculate(this.pLens.hasAstigmatism);
+    //this.pLens.calculate(this.pLens.hasAstigmatism);
     this.navCtrl.push(OrderDetailsPage);
   }
 }

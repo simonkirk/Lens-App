@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 /*
   Generated class for the OrderDetails page.
 
@@ -13,7 +13,7 @@ import { LensProvider } from '../../providers/lens';
 })
 export class OrderDetailsPage {
 
-  constructor(public navCtrl: NavController, public pLens: LensProvider) {}
+  constructor(public navCtrl: NavController, public lens: LensProvider) {}
 
   ionViewDidLoad() {}
 

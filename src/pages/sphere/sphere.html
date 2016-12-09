@@ -12,54 +12,47 @@
   <ion-grid style="height: 100%">
     <ion-row>
       <ion-col>
-        <h4 style="margin-bottom: 1.6em"> Enter Spectacle Prescription </h4>
-        <hr style="margin-bottom: 2.6em" />
-        <ion-row>
+        <h4 style="margin-bottom: 1em"> Enter Spectacle Prescription </h4>
+        <hr style="margin-bottom: 1em" />
+        <h5> Left eye</h5>
+        <ion-row center-text>
           <ion-col center text-right width-25>
-            <button (click)="dec()" clear color="lens-light" ion-button>
+            <button (click)="decL()" clear color="lens-light" ion-button>
               <ion-icon name="remove"></ion-icon>
             </button>
           </ion-col>
           <ion-col center width-50 style="font-size: 2em">
-            <ion-input text-center type="number" [(ngModel)]="pLens.prescription" ></ion-input>
+            <ion-input text-center type="number" [(ngModel)]="lens.prescription.leftEye" ></ion-input>
           </ion-col>
           <ion-col center text-left width-25>
-            <button (click)="inc()" clear color="lens-light" ion-button>
+            <button (click)="incL()" clear color="lens-light" ion-button>
               <ion-icon name="add"></ion-icon>
             </button>
           </ion-col>
         </ion-row>
+        <h5> Right eye</h5>
         <ion-row>
-          <ion-col>
-            <ion-item no-lines>
-              <ion-label>Has astigmatism</ion-label>
-              <ion-toggle color="lens-light" [(ngModel)]="pLens.hasAstigmatism"></ion-toggle>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-        <ion-row *ngIf="pLens.hasAstigmatism">
           <ion-col center text-right width-25>
-            <button (click)="decA()" clear color="lens-light" ion-button>
+            <button (click)="decR()" clear color="lens-light" ion-button>
               <ion-icon name="remove"></ion-icon>
             </button>
           </ion-col>
           <ion-col center width-50 style="font-size: 2em">
-            <ion-input text-center type="number" [(ngModel)]="pLens.astigmatismValue" ></ion-input>
+            <ion-input text-center type="number" [(ngModel)]="lens.prescription.rightEye" ></ion-input>
           </ion-col>
           <ion-col center text-left width-25>
-            <button (click)="incA()" clear color="lens-light" ion-button>
+            <button (click)="incR()" clear color="lens-light" ion-button>
               <ion-icon name="add"></ion-icon>
             </button>
           </ion-col>
-        </ion-row>
-        
+        </ion-row>                
       </ion-col>
     </ion-row>
 
     <ion-footer style="margin-bottom: 2em">
       <ion-row>
         <ion-col width-80 offset-10>
-          <button (click)="calculate()" style="margin-bottom: 3em" color="lens-dark" ion-button block>Calculate</button>
+          <button (click)="calculateBtn()" style="margin-bottom: 3em" color="lens-dark" ion-button block>Calculate</button>
           <hr />
         </ion-col>
       </ion-row>

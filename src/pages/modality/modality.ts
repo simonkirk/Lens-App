@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DailyPage } from '../daily/daily';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 
 /*
   Generated class for the Modality page.
@@ -15,11 +15,11 @@ import { LensProvider } from '../../providers/lens';
 })
 export class ModalityPage {
 
-  constructor(public navCtrl: NavController, private pLens: LensProvider) {}
+  constructor(public navCtrl: NavController, private lens: LensProvider) {}
 
   ionViewDidLoad() {}
   daily(){
-    this.pLens.setModality('daily');
+    this.lens.lensModality = 'Daily';
     this.navCtrl.push(DailyPage);
   }
 }

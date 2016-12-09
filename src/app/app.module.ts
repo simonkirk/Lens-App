@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { LensProvider } from '../providers/lens';
+import { LensProvider } from '../providers/lens-provider';
 import { AuthProvider } from '../providers/auth-provider';
 import { HomePage } from '../pages/home/home';
 import { AuthPage } from '../pages/auth/auth';

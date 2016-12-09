@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 import { ConfirmationPage } from '../confirmation/confirmation';
 /*
   Generated class for the Daily page.
@@ -14,11 +14,11 @@ import { ConfirmationPage } from '../confirmation/confirmation';
 })
 export class DailyPage {
 
-  constructor(public navCtrl: NavController, private pLens: LensProvider) {}
+  constructor(public navCtrl: NavController, private lens: LensProvider) {}
 
   ionViewDidLoad() {}
   clarity1day(){
-    this.pLens.setDailyDisponsableOptions('clarity1day');
+    this.lens.dailyDisponsableOptions = 'Clarity 1 day';
     this.navCtrl.push(ConfirmationPage);
   }
 
