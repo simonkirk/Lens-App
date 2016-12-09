@@ -26547,10 +26547,6 @@ sub {
   }
 }
 
-.border-right {
-  border-right: 1px solid white;
-}
-
 .buttons-vertical {
   height: 100%;
 }
