@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="lens-dark">
+    <ion-title text-center>
+      iOptom
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center margin-top>
+
+  <ion-grid style="height: 100%">
+    <ion-row>
+      <ion-col width-80 offset-10>
+        <h4> Select lens modality </h4>
+      </ion-col>
+    </ion-row>
+    <ion-row center class="buttons-vertical">
+      <ion-col width-80 offset-10>
+        <hr />
+        <button (click)="daily()" color="lens-dark" ion-button block>Daily</button>
+        <button color="lens-dark" ion-button block>Fornighty</button>
+        <button color="lens-dark" ion-button block>Monthly</button>
+        <hr />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

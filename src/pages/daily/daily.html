@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="lens-dark">
+    <ion-title text-center>
+      iOptom
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center margin-top>
+
+  <ion-grid style="height: 100%">
+    <ion-row>
+      <ion-col>
+        <h4> Daily Disposable Options </h4>
+      </ion-col>
+    </ion-row>
+    <ion-row center class="buttons-vertical">
+      <ion-col width-80 offset-10>
+        <hr />
+        <h4>Sort lenses <ion-icon name="funnel"></ion-icon></h4>
+        <!-- <button (click)="clarity1day()" color="lens-dark" ion-button block>Clarity 1 day</button> -->
+        <ion-card (click)="clarity1day()" color="lens-dark">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="border-right" center width-20>
+                <img src="assets/images/lens.png" />
+              </ion-col>
+              <ion-col center width-80 text-left>
+                <h3> Clarity 1 day </h3>
+                <p style="font-size: 10px"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <ion-card color="lens-dark">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="border-right" center width-20>
+                <img src="assets/images/lens.png" />
+              </ion-col>
+              <ion-col center width-80 text-left>
+                <h3> 1 day moist </h3>
+                <p style="font-size: 10px"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <ion-card color="lens-dark">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="border-right" center width-20>
+                <img src="assets/images/lens.png" />
+              </ion-col>
+              <ion-col center width-80 text-left>
+                <h3> Proclear 1 day </h3>
+                <p style="font-size: 10px"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <hr />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
