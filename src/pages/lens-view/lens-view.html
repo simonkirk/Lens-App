@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="lens-dark">
+    <ion-title text-center>
+      iOptom
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding text-center margin-top>
+  <ion-grid style="height: 100%">
+    <ion-row>
+      <ion-col width-80 offset-10>
+        <h4> {{lens.lensChoosen.name}} </h4>
+      </ion-col>
+    </ion-row>
+    <hr />
+    <h6>Adjust left eye RX</h6>
+        <ion-row center center-text>
+          <ion-col center text-right width-25>
+            <button (click)="lens.decLRx()" clear color="lens-light" ion-button>
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col center width-50 style="font-size: 1.3em">
+            {{lens.RX.l}}
+          </ion-col>
+          <ion-col center text-left width-25>
+            <button (click)="lens.incLRx()" clear color="lens-light" ion-button>
+              <ion-icon name="add"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <h6>Adjust right eye RX</h6>
+        <ion-row>
+          <ion-col center text-right width-25>
+            <button (click)="lens.decRRx()" clear color="lens-light" ion-button>
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col center width-50 style="font-size: 1.3em">
+            {{lens.RX.r}}
+          </ion-col>
+          <ion-col center text-left width-25>
+            <button (click)="lens.incRRx()" clear color="lens-light" ion-button>
+              <ion-icon name="add"></ion-icon>
+            </button>
+          </ion-col>
+          
+        </ion-row>
+  </ion-grid>
+  <ion-footer>
+    <ion-row>
+        <ion-col width-80 offset-10>
+          <button (click)="placeOrder()" style="margin-bottom: 2em" color="lens-light" ion-button block>Place order</button>
+          <hr />
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+</ion-content>

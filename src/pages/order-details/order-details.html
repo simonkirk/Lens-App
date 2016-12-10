@@ -5,26 +5,31 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
-
   <ion-grid style="height: 100%">
     <ion-row center class="buttons-vertical">
       <ion-col width-80 offset-10>
-            <ion-list-header>
-              Order Details
-            </ion-list-header>
-            <h4 style="text-weight: bold">Patient Reference</h4>
-            <p>{{lens.patientRef}}</p>
-            <h4>Lens TYPE</h4>
-            <p>{{lens.lensType}}</p>
-            <h4>Prescription</h4>
-            <p> Left eye: {{lens.prescription.leftEye}} | Right eye: {{lens.prescription.rightEye}} </p>
-            <h4>Modality</h4>
-            <p> {{lens.lensModality}} </p>
-            <h4> Daily options </h4>
-            <p>{{lens.dailyDisponsableOptions}}</p>
-            <h4> RX out: {{lens.vertexAdjustedRx}} </h4>
+        <ion-list>
+          <ion-list-header>Order Details(to be sent)</ion-list-header>
+          <ion-item>
+            Lens type <ion-note item-right> {{lens.lensType}} </ion-note>
+          </ion-item>
+          <ion-item>
+            Lens modality <ion-note item-right> {{lens.lensModality}} </ion-note>
+          </ion-item>
+          <ion-item>
+            Was RX adjusted? <ion-note item-right> {{lens.RX.wasAdjusted}} </ion-note>
+          </ion-item>
+          <ion-item>
+            LeftEye RX <ion-note item-right> {{lens.RX.l}} </ion-note>
+          </ion-item>
+          <ion-item>
+            RightEye RX <ion-note item-right> {{lens.RX.r}} </ion-note>
+          </ion-item>
+          <ion-item>
+            Patient Ref <ion-note item-right> {{lens.patientRef}} </ion-note>
+          </ion-item>
+        </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>

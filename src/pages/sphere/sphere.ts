@@ -17,10 +17,8 @@ export class SpherePage {
   constructor(public navCtrl: NavController, public lens: LensProvider) {}
   ionViewDidLoad() {
   }
-  calculateBtn(){this.navCtrl.push(ModalityPage)}
-  decL(){this.lens.decL()}
-  incL(){this.lens.incL()}
-  decR(){this.lens.decR()}
-  incR(){this.lens.incR()}
-
+  calculateBtn(){
+    this.lens.calculate();
+    this.navCtrl.push(ModalityPage);
+  }
 }

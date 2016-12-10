@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LensProvider } from '../../providers/lens-provider';
 import { ConfirmationPage } from '../confirmation/confirmation';
+import { SearchResultPage } from '../search-result/search-result';
 /*
   Generated class for the Daily page.
 
@@ -19,7 +20,7 @@ export class DailyPage {
   ionViewDidLoad() {}
   clarity1day(){
     this.lens.dailyDisponsableOptions = 'Clarity 1 day';
-    this.navCtrl.push(ConfirmationPage);
+    this.navCtrl.push(SearchResultPage);
   }
 
 }

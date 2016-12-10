@@ -1,25 +1,32 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { DailyPage } from '../daily/daily';
+import { NavController, LoadingController } from 'ionic-angular';
 import { LensProvider } from '../../providers/lens-provider';
+import { Search } from '../../providers/search';
+import { SearchResultPage } from '../search-result/search-result';
 
-/*
-  Generated class for the Modality page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-modality',
   templateUrl: 'modality.html'
 })
 export class ModalityPage {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public search: Search, public lens: LensProvider) {}
 
-  constructor(public navCtrl: NavController, private lens: LensProvider) {}
-
-  ionViewDidLoad() {}
+  ionViewDidLoad() {
+  }
   daily(){
     this.lens.lensModality = 'Daily';
-    this.navCtrl.push(DailyPage);
+    this.loader.present();
+    this.search.search().subscribe((res)=>{
+      this.lens.tmp = res.results;
+      this.loader.dismiss();
+      this.navCtrl.push(SearchResultPage);
+    }, err => {
+      this.loader.dismiss();
+    });
   }
+
+
+  loader = this.loadingCtrl.create({
+    content: 'Searching...'
+  });
 }
