@@ -7,19 +7,16 @@
 </ion-header>
 
 <ion-content text-center>
-
   <ion-grid style="height: 100%">
     <ion-row center class="buttons-vertical">
       <ion-col width-80 offset-10>
-            <ion-list-header>
-              Enter Patient Ref
-            </ion-list-header>
-            <ion-item no-lines text-center>
-              <ion-input text-center [(ngModel)]="pLens.patientRef" type="text" ></ion-input>
-            </ion-item>
-            <ion-item text-center no-lines>
-              <button color="lens-dark" block ion-button (click)="finish()"> Finish </button>
-            </ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-label>Ref</ion-label>     
+            <ion-input text-center [(ngModel)]="lens.patientRef" type="text" ></ion-input>
+          </ion-item>
+        </ion-list>
+        <button color="lens-light" block ion-button (click)="finish()"> Finish </button>
       </ion-col>
     </ion-row>
   </ion-grid>

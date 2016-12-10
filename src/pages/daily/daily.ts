@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LensProvider } from '../../providers/lens-provider';
-import { ConfirmationPage } from '../confirmation/confirmation';
+//import { ConfirmationPage } from '../confirmation/confirmation';
 import { SearchResultPage } from '../search-result/search-result';
 /*
   Generated class for the Daily page.

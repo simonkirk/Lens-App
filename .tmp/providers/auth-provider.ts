@@ -17,7 +17,7 @@ export class AuthProvider {
   login(username, password){
       let headers = new Headers({ 'Content-Type': 'application/json' });
       let options = new RequestOptions({ headers: headers });
-      return this.http.post('http://5.56.125.168/login', {username: username}, options).map((res) => res.json());
+      return this.http.post('http://zolotoypavlin.com:3000/login', {username: username}, options).map((res) => res.json());
   }
   logout(){
     window.localStorage.removeItem('username');

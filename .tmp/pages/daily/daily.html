@@ -10,16 +10,51 @@
 
   <ion-grid style="height: 100%">
     <ion-row>
-      <ion-col width-80 offset-10>
+      <ion-col>
         <h4> Daily Disposable Options </h4>
       </ion-col>
     </ion-row>
     <ion-row center class="buttons-vertical">
       <ion-col width-80 offset-10>
         <hr />
-        <button (click)="clarity1day()" color="lens-dark" ion-button block>Clarity 1 day</button>
-        <button color="lens-dark" ion-button block>1 day moist</button>
-        <button color="lens-dark" ion-button block>Proclear 1 day</button>
+        <h4>Sort lenses <ion-icon name="funnel"></ion-icon></h4>
+        <!-- <button (click)="clarity1day()" color="lens-dark" ion-button block>Clarity 1 day</button> -->
+        <ion-card (click)="clarity1day()" color="lens-dark">
+          <ion-grid>
+            <ion-row>
+              <ion-col center width-25>
+                <img src="assets/images/lens.png" />
+              </ion-col>
+              <ion-col center text-left>
+                <ion-card-header> Clarity 1 day </ion-card-header>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <ion-card color="lens-dark">
+          <ion-grid>
+            <ion-row>
+              <ion-col center width-25>
+                <img src="assets/images/lens.png" />
+              </ion-col>
+              <ion-col center text-left>
+                <ion-card-header> 1 day moist </ion-card-header>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <ion-card color="lens-dark">
+          <ion-grid>
+            <ion-row>
+              <ion-col center width-25>
+                <img src="assets/images/lens.png" />
+              </ion-col>
+              <ion-col center text-left>
+                <ion-card-header> Proclear 1 day </ion-card-header>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
         <hr />
       </ion-col>
     </ion-row>

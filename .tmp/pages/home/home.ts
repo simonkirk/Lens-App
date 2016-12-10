@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SpherePage } from '../sphere/sphere';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 import { AuthProvider } from '../../providers/auth-provider';
 import { AuthPage } from '../auth/auth';
 
@@ -10,8 +10,7 @@ import { AuthPage } from '../auth/auth';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  sphere = SpherePage;
-  constructor(public navCtrl: NavController, private pLens: LensProvider, private auth: AuthProvider) {
+  constructor(public navCtrl: NavController, private lens: LensProvider, private auth: AuthProvider) {
     
   }
   logout(){
@@ -19,7 +18,7 @@ export class HomePage {
     this.navCtrl.setRoot(AuthPage);
   }
   toSphere(){
-    this.pLens.setType('sphere');
+    this.lens.lensType = 'Sphere';
     this.navCtrl.push(SpherePage);
   }
 }

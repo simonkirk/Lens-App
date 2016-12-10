@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 import { OrderDetailsPage } from '../order-details/order-details';
 /*
   Generated class for the Referal page.
@@ -9,13 +9,13 @@ import { OrderDetailsPage } from '../order-details/order-details';
   Ionic pages and navigation.
 */
 export var ReferalPage = (function () {
-    function ReferalPage(navCtrl, pLens) {
+    function ReferalPage(navCtrl, lens) {
         this.navCtrl = navCtrl;
-        this.pLens = pLens;
+        this.lens = lens;
     }
     ReferalPage.prototype.ionViewDidLoad = function () { };
     ReferalPage.prototype.finish = function () {
-        this.pLens.calculate(this.pLens.hasAstigmatism);
+        //this.pLens.calculate(this.pLens.hasAstigmatism);
         this.navCtrl.push(OrderDetailsPage);
     };
     ReferalPage.decorators = [

@@ -13,34 +13,36 @@ import * as import5 from '@angular/core/src/di/injector';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
-import * as import9 from '../../providers/lens';
-import * as import10 from '@angular/core/src/metadata/view';
-import * as import11 from '@angular/core/src/linker/component_factory';
-import * as import12 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
-import * as import13 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
-import * as import14 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
-import * as import15 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import16 from '../../node_modules/ionic-angular/components/grid/grid.ngfactory';
-import * as import17 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
-import * as import18 from 'ionic-angular/config/config';
-import * as import19 from '@angular/core/src/linker/element_ref';
-import * as import20 from 'ionic-angular/navigation/view-controller';
-import * as import21 from 'ionic-angular/components/app/app';
-import * as import22 from 'ionic-angular/components/toolbar/toolbar';
-import * as import23 from 'ionic-angular/util/keyboard';
-import * as import24 from '@angular/core/src/zone/ng_zone';
-import * as import25 from 'ionic-angular/components/tabs/tabs';
-import * as import26 from 'ionic-angular/components/toolbar/toolbar-title';
-import * as import27 from 'ionic-angular/components/navbar/navbar';
-import * as import28 from 'ionic-angular/components/grid/grid';
-import * as import29 from 'ionic-angular/components/button/button';
-import * as import30 from 'ionic-angular/components/content/content';
+import * as import9 from 'ionic-angular/components/loading/loading';
+import * as import10 from '../../providers/search';
+import * as import11 from '../../providers/lens-provider';
+import * as import12 from '@angular/core/src/metadata/view';
+import * as import13 from '@angular/core/src/linker/component_factory';
+import * as import14 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
+import * as import15 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
+import * as import16 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
+import * as import17 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import18 from '../../node_modules/ionic-angular/components/grid/grid.ngfactory';
+import * as import19 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
+import * as import20 from 'ionic-angular/config/config';
+import * as import21 from '@angular/core/src/linker/element_ref';
+import * as import22 from 'ionic-angular/navigation/view-controller';
+import * as import23 from 'ionic-angular/components/app/app';
+import * as import24 from 'ionic-angular/components/toolbar/toolbar';
+import * as import25 from 'ionic-angular/util/keyboard';
+import * as import26 from '@angular/core/src/zone/ng_zone';
+import * as import27 from 'ionic-angular/components/tabs/tabs';
+import * as import28 from 'ionic-angular/components/toolbar/toolbar-title';
+import * as import29 from 'ionic-angular/components/navbar/navbar';
+import * as import30 from 'ionic-angular/components/grid/grid';
+import * as import31 from 'ionic-angular/components/button/button';
+import * as import32 from 'ionic-angular/components/content/content';
 export class Wrapper_ModalityPage {
   context:import0.ModalityPage;
   changed:boolean;
-  constructor(p0:any,p1:any) {
+  constructor(p0:any,p1:any,p2:any,p3:any) {
     this.changed = false;
-    this.context = new import0.ModalityPage(p0,p1);
+    this.context = new import0.ModalityPage(p0,p1,p2,p3);
   }
   detectChangesInternal(view:import1.AppView<any>,el:any,throwOnChange:boolean):boolean {
     var changed:any = this.changed;
@@ -60,7 +62,7 @@ class _View_ModalityPage_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('page-modality',rootSelector,(null as any));
     this._appEl_0 = new import3.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_ModalityPage0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._ModalityPage_0_4 = new Wrapper_ModalityPage(this.parentInjector.get(import8.NavController),this.parentInjector.get(import9.LensProvider));
+    this._ModalityPage_0_4 = new Wrapper_ModalityPage(this.parentInjector.get(import8.NavController),this.parentInjector.get(import9.LoadingController),this.parentInjector.get(import10.Search),this.parentInjector.get(import11.LensProvider));
     this._appEl_0.initComponent(this._ModalityPage_0_4.context,([] as any[]),compView_0);
     compView_0.create(this._ModalityPage_0_4.context,this.projectableNodes,(null as any));
     this.init(([] as any[]).concat([this._el_0]),[this._el_0],([] as any[]),([] as any[]));
@@ -77,39 +79,39 @@ class _View_ModalityPage_Host0 extends import1.AppView<any> {
   }
 }
 function viewFactory_ModalityPage_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<any> {
-  if ((renderType_ModalityPage_Host === (null as any))) { (renderType_ModalityPage_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,([] as any[]),{})); }
+  if ((renderType_ModalityPage_Host === (null as any))) { (renderType_ModalityPage_Host = viewUtils.createRenderComponentType('',0,import12.ViewEncapsulation.None,([] as any[]),{})); }
   return new _View_ModalityPage_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const ModalityPageNgFactory:import11.ComponentFactory<import0.ModalityPage> = new import11.ComponentFactory<import0.ModalityPage>('page-modality',viewFactory_ModalityPage_Host0,import0.ModalityPage);
+export const ModalityPageNgFactory:import13.ComponentFactory<import0.ModalityPage> = new import13.ComponentFactory<import0.ModalityPage>('page-modality',viewFactory_ModalityPage_Host0,import0.ModalityPage);
 const styles_ModalityPage:any[] = ([] as any[]);
 var renderType_ModalityPage:import2.RenderComponentType = (null as any);
 class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
   _el_0:any;
-  _Header_0_3:import12.Wrapper_Header;
+  _Header_0_3:import14.Wrapper_Header;
   _text_1:any;
   _el_2:any;
   /*private*/ _appEl_2:import3.AppElement;
-  _Navbar_2_4:import13.Wrapper_Navbar;
+  _Navbar_2_4:import15.Wrapper_Navbar;
   _text_3:any;
   _el_4:any;
   /*private*/ _appEl_4:import3.AppElement;
-  _ToolbarTitle_4_4:import14.Wrapper_ToolbarTitle;
+  _ToolbarTitle_4_4:import16.Wrapper_ToolbarTitle;
   _text_5:any;
   _text_6:any;
   _text_7:any;
   _text_8:any;
   _el_9:any;
   /*private*/ _appEl_9:import3.AppElement;
-  _Content_9_4:import15.Wrapper_Content;
+  _Content_9_4:import17.Wrapper_Content;
   _text_10:any;
   _el_11:any;
-  _Grid_11_3:import16.Wrapper_Grid;
+  _Grid_11_3:import18.Wrapper_Grid;
   _text_12:any;
   _el_13:any;
-  _Row_13_3:import16.Wrapper_Row;
+  _Row_13_3:import18.Wrapper_Row;
   _text_14:any;
   _el_15:any;
-  _Col_15_3:import16.Wrapper_Col;
+  _Col_15_3:import18.Wrapper_Col;
   _text_16:any;
   _el_17:any;
   _text_18:any;
@@ -117,26 +119,26 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
   _text_20:any;
   _text_21:any;
   _el_22:any;
-  _Row_22_3:import16.Wrapper_Row;
+  _Row_22_3:import18.Wrapper_Row;
   _text_23:any;
   _el_24:any;
-  _Col_24_3:import16.Wrapper_Col;
+  _Col_24_3:import18.Wrapper_Col;
   _text_25:any;
   _el_26:any;
   _text_27:any;
   _el_28:any;
   /*private*/ _appEl_28:import3.AppElement;
-  _Button_28_4:import17.Wrapper_Button;
+  _Button_28_4:import19.Wrapper_Button;
   _text_29:any;
   _text_30:any;
   _el_31:any;
   /*private*/ _appEl_31:import3.AppElement;
-  _Button_31_4:import17.Wrapper_Button;
+  _Button_31_4:import19.Wrapper_Button;
   _text_32:any;
   _text_33:any;
   _el_34:any;
   /*private*/ _appEl_34:import3.AppElement;
-  _Button_34_4:import17.Wrapper_Button;
+  _Button_34_4:import19.Wrapper_Button;
   _text_35:any;
   _text_36:any;
   _el_37:any;
@@ -154,21 +156,21 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
   createInternal(rootSelector:string):import3.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'ion-header',(null as any));
-    this._Header_0_3 = new import12.Wrapper_Header(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import20.ViewController,(null as any)));
+    this._Header_0_3 = new import14.Wrapper_Header(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import22.ViewController,(null as any)));
     this._text_1 = this.renderer.createText(this._el_0,'\n  ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'ion-navbar',(null as any));
     this.renderer.setElementAttribute(this._el_2,'class','toolbar');
     this.renderer.setElementAttribute(this._el_2,'color','lens-dark');
     this._appEl_2 = new import3.AppElement(2,0,this,this._el_2);
-    var compView_2:any = import13.viewFactory_Navbar0(this.viewUtils,this.injector(2),this._appEl_2);
-    this._Navbar_2_4 = new import13.Wrapper_Navbar(this.parentInjector.get(import21.App),this.parentInjector.get(import20.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_2),this.renderer);
+    var compView_2:any = import15.viewFactory_Navbar0(this.viewUtils,this.injector(2),this._appEl_2);
+    this._Navbar_2_4 = new import15.Wrapper_Navbar(this.parentInjector.get(import23.App),this.parentInjector.get(import22.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_2),this.renderer);
     this._appEl_2.initComponent(this._Navbar_2_4.context,([] as any[]),compView_2);
     this._text_3 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_4 = this.renderer.createElement((null as any),'ion-title',(null as any));
     this.renderer.setElementAttribute(this._el_4,'text-center','');
     this._appEl_4 = new import3.AppElement(4,2,this,this._el_4);
-    var compView_4:any = import14.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
-    this._ToolbarTitle_4_4 = new import14.Wrapper_ToolbarTitle(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import22.Toolbar,(null as any)),this._Navbar_2_4.context);
+    var compView_4:any = import16.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
+    this._ToolbarTitle_4_4 = new import16.Wrapper_ToolbarTitle(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import24.Toolbar,(null as any)),this._Navbar_2_4.context);
     this._appEl_4.initComponent(this._ToolbarTitle_4_4.context,([] as any[]),compView_4);
     this._text_5 = this.renderer.createText((null as any),'\n      iOptom\n    ',(null as any));
     compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([this._text_5])],(null as any));
@@ -192,21 +194,21 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
     this.renderer.setElementAttribute(this._el_9,'padding','');
     this.renderer.setElementAttribute(this._el_9,'text-center','');
     this._appEl_9 = new import3.AppElement(9,(null as any),this,this._el_9);
-    var compView_9:any = import15.viewFactory_Content0(this.viewUtils,this.injector(9),this._appEl_9);
-    this._Content_9_4 = new import15.Wrapper_Content(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import21.App),this.parentInjector.get(import23.Keyboard),this.parentInjector.get(import24.NgZone),this.parentInjector.get(import20.ViewController,(null as any)),this.parentInjector.get(import25.Tabs,(null as any)));
+    var compView_9:any = import17.viewFactory_Content0(this.viewUtils,this.injector(9),this._appEl_9);
+    this._Content_9_4 = new import17.Wrapper_Content(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import23.App),this.parentInjector.get(import25.Keyboard),this.parentInjector.get(import26.NgZone),this.parentInjector.get(import22.ViewController,(null as any)),this.parentInjector.get(import27.Tabs,(null as any)));
     this._appEl_9.initComponent(this._Content_9_4.context,([] as any[]),compView_9);
-    this._text_10 = this.renderer.createText((null as any),'\n\n  ',(null as any));
+    this._text_10 = this.renderer.createText((null as any),'\n  ',(null as any));
     this._el_11 = this.renderer.createElement((null as any),'ion-grid',(null as any));
     this.renderer.setElementAttribute(this._el_11,'style','height: 100%');
-    this._Grid_11_3 = new import16.Wrapper_Grid();
+    this._Grid_11_3 = new import18.Wrapper_Grid();
     this._text_12 = this.renderer.createText(this._el_11,'\n    ',(null as any));
     this._el_13 = this.renderer.createElement(this._el_11,'ion-row',(null as any));
-    this._Row_13_3 = new import16.Wrapper_Row();
+    this._Row_13_3 = new import18.Wrapper_Row();
     this._text_14 = this.renderer.createText(this._el_13,'\n      ',(null as any));
     this._el_15 = this.renderer.createElement(this._el_13,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_15,'offset-10','');
     this.renderer.setElementAttribute(this._el_15,'width-80','');
-    this._Col_15_3 = new import16.Wrapper_Col();
+    this._Col_15_3 = new import18.Wrapper_Col();
     this._text_16 = this.renderer.createText(this._el_15,'\n        ',(null as any));
     this._el_17 = this.renderer.createElement(this._el_15,'h4',(null as any));
     this._text_18 = this.renderer.createText(this._el_17,' Select lens modality ',(null as any));
@@ -216,12 +218,12 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
     this._el_22 = this.renderer.createElement(this._el_11,'ion-row',(null as any));
     this.renderer.setElementAttribute(this._el_22,'center','');
     this.renderer.setElementAttribute(this._el_22,'class','buttons-vertical');
-    this._Row_22_3 = new import16.Wrapper_Row();
+    this._Row_22_3 = new import18.Wrapper_Row();
     this._text_23 = this.renderer.createText(this._el_22,'\n      ',(null as any));
     this._el_24 = this.renderer.createElement(this._el_22,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_24,'offset-10','');
     this.renderer.setElementAttribute(this._el_24,'width-80','');
-    this._Col_24_3 = new import16.Wrapper_Col();
+    this._Col_24_3 = new import18.Wrapper_Col();
     this._text_25 = this.renderer.createText(this._el_24,'\n        ',(null as any));
     this._el_26 = this.renderer.createElement(this._el_24,'hr',(null as any));
     this._text_27 = this.renderer.createText(this._el_24,'\n        ',(null as any));
@@ -230,8 +232,8 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
     this.renderer.setElementAttribute(this._el_28,'color','lens-dark');
     this.renderer.setElementAttribute(this._el_28,'ion-button','');
     this._appEl_28 = new import3.AppElement(28,24,this,this._el_28);
-    var compView_28:any = import17.viewFactory_Button0(this.viewUtils,this.injector(28),this._appEl_28);
-    this._Button_28_4 = new import17.Wrapper_Button((null as any),'',this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_28),this.renderer);
+    var compView_28:any = import19.viewFactory_Button0(this.viewUtils,this.injector(28),this._appEl_28);
+    this._Button_28_4 = new import19.Wrapper_Button((null as any),'',this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_28),this.renderer);
     this._appEl_28.initComponent(this._Button_28_4.context,([] as any[]),compView_28);
     this._text_29 = this.renderer.createText((null as any),'Daily',(null as any));
     compView_28.create(this._Button_28_4.context,[([] as any[]).concat([this._text_29])],(null as any));
@@ -241,8 +243,8 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
     this.renderer.setElementAttribute(this._el_31,'color','lens-dark');
     this.renderer.setElementAttribute(this._el_31,'ion-button','');
     this._appEl_31 = new import3.AppElement(31,24,this,this._el_31);
-    var compView_31:any = import17.viewFactory_Button0(this.viewUtils,this.injector(31),this._appEl_31);
-    this._Button_31_4 = new import17.Wrapper_Button((null as any),'',this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_31),this.renderer);
+    var compView_31:any = import19.viewFactory_Button0(this.viewUtils,this.injector(31),this._appEl_31);
+    this._Button_31_4 = new import19.Wrapper_Button((null as any),'',this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_31),this.renderer);
     this._appEl_31.initComponent(this._Button_31_4.context,([] as any[]),compView_31);
     this._text_32 = this.renderer.createText((null as any),'Fornighty',(null as any));
     compView_31.create(this._Button_31_4.context,[([] as any[]).concat([this._text_32])],(null as any));
@@ -252,8 +254,8 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
     this.renderer.setElementAttribute(this._el_34,'color','lens-dark');
     this.renderer.setElementAttribute(this._el_34,'ion-button','');
     this._appEl_34 = new import3.AppElement(34,24,this,this._el_34);
-    var compView_34:any = import17.viewFactory_Button0(this.viewUtils,this.injector(34),this._appEl_34);
-    this._Button_34_4 = new import17.Wrapper_Button((null as any),'',this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_34),this.renderer);
+    var compView_34:any = import19.viewFactory_Button0(this.viewUtils,this.injector(34),this._appEl_34);
+    this._Button_34_4 = new import19.Wrapper_Button((null as any),'',this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_34),this.renderer);
     this._appEl_34.initComponent(this._Button_34_4.context,([] as any[]),compView_34);
     this._text_35 = this.renderer.createText((null as any),'Monthly',(null as any));
     compView_34.create(this._Button_34_4.context,[([] as any[]).concat([this._text_35])],(null as any));
@@ -328,18 +330,18 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import26.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
-    if (((token === import27.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
-    if (((token === import22.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
-    if (((token === import28.Col) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 19)))) { return this._Col_15_3.context; }
-    if (((token === import28.Row) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 20)))) { return this._Row_13_3.context; }
-    if (((token === import29.Button) && ((28 <= requestNodeIndex) && (requestNodeIndex <= 29)))) { return this._Button_28_4.context; }
-    if (((token === import29.Button) && ((31 <= requestNodeIndex) && (requestNodeIndex <= 32)))) { return this._Button_31_4.context; }
-    if (((token === import29.Button) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 35)))) { return this._Button_34_4.context; }
-    if (((token === import28.Col) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._Col_24_3.context; }
-    if (((token === import28.Row) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 39)))) { return this._Row_22_3.context; }
-    if (((token === import28.Grid) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 40)))) { return this._Grid_11_3.context; }
-    if (((token === import30.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 41)))) { return this._Content_9_4.context; }
+    if (((token === import28.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
+    if (((token === import29.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
+    if (((token === import24.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
+    if (((token === import30.Col) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 19)))) { return this._Col_15_3.context; }
+    if (((token === import30.Row) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 20)))) { return this._Row_13_3.context; }
+    if (((token === import31.Button) && ((28 <= requestNodeIndex) && (requestNodeIndex <= 29)))) { return this._Button_28_4.context; }
+    if (((token === import31.Button) && ((31 <= requestNodeIndex) && (requestNodeIndex <= 32)))) { return this._Button_31_4.context; }
+    if (((token === import31.Button) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 35)))) { return this._Button_34_4.context; }
+    if (((token === import30.Col) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._Col_24_3.context; }
+    if (((token === import30.Row) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 39)))) { return this._Row_22_3.context; }
+    if (((token === import30.Grid) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 40)))) { return this._Grid_11_3.context; }
+    if (((token === import32.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 41)))) { return this._Content_9_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -403,6 +405,6 @@ class _View_ModalityPage0 extends import1.AppView<import0.ModalityPage> {
   }
 }
 export function viewFactory_ModalityPage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<import0.ModalityPage> {
-  if ((renderType_ModalityPage === (null as any))) { (renderType_ModalityPage = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,styles_ModalityPage,{})); }
+  if ((renderType_ModalityPage === (null as any))) { (renderType_ModalityPage = viewUtils.createRenderComponentType('',0,import12.ViewEncapsulation.None,styles_ModalityPage,{})); }
   return new _View_ModalityPage0(viewUtils,parentInjector,declarationEl);
 }

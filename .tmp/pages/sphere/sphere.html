@@ -5,64 +5,175 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
-
-<ion-content padding text-center margin-top>
-
-  <ion-grid style="height: 100%">
+<ion-content text-center>
+  
+  <ion-grid margin-top>
+    <h4 style="">Enter spectacle prescription</h4>
+    <hr style="margin-bottom: 2em" />
     <ion-row>
-      <ion-col>
-        <h4 style="margin-bottom: 1.6em"> Enter Spectacle Prescription </h4>
-        <hr style="margin-bottom: 2.6em" />
-        <ion-row>
-          <ion-col center text-right width-25>
-            <button (click)="dec()" clear color="lens-light" ion-button>
-              <ion-icon name="remove"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col center width-50 style="font-size: 2em">
-            <ion-input text-center type="number" [(ngModel)]="pLens.prescription" ></ion-input>
-          </ion-col>
-          <ion-col center text-left width-25>
-            <button (click)="inc()" clear color="lens-light" ion-button>
-              <ion-icon name="add"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-item no-lines>
-              <ion-label>Has astigmatism</ion-label>
-              <ion-toggle color="lens-light" [(ngModel)]="pLens.hasAstigmatism"></ion-toggle>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-        <ion-row *ngIf="pLens.hasAstigmatism">
-          <ion-col center text-right width-25>
-            <button (click)="decA()" clear color="lens-light" ion-button>
-              <ion-icon name="remove"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col center width-50 style="font-size: 2em">
-            <ion-input text-center type="number" [(ngModel)]="pLens.astigmatismValue" ></ion-input>
-          </ion-col>
-          <ion-col center text-left width-25>
-            <button (click)="incA()" clear color="lens-light" ion-button>
-              <ion-icon name="add"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        
-      </ion-col>
+      <ion-col width-25></ion-col>
+      <ion-col> LE</ion-col>
+      <ion-col >RE</ion-col>
     </ion-row>
-
-    <ion-footer style="margin-bottom: 2em">
-      <ion-row>
+    <!-- SPHERE -->
+    <ion-card color="lens-dark" style="margin-left:0; margin:right: 0;width: 100%">
+      <ion-row center>
+        <ion-col width-25>Sphere</ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decSL()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.sphere.l}}
+              </ion-col>
+              <ion-col class="nP">
+                <button (click)="lens.incSL()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decSR()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.sphere.r}}
+              </ion-col>
+              <ion-col>
+                <button (click)="lens.incSR()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <!-- CYLINDER -->
+    <ion-card color="lens-dark" style="margin-left:0; margin:right: 0;width: 100%">
+      <ion-row center>
+        <ion-col width-25>
+          <ion-row>
+            Cylinder
+          </ion-row>
+          <ion-row>
+            <ion-toggle [(ngModel)]="lens.prescription.hasToric" checked="false"></ion-toggle>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decCL()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.cylinder.l}}
+              </ion-col>
+              <ion-col class="nP">
+                <button (click)="lens.incCL()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decCR()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.cylinder.r}}
+              </ion-col>
+              <ion-col>
+                <button (click)="lens.incCR()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <!-- AXIS -->
+    <ion-card color="lens-dark" style="margin-left:0; margin:right: 0;width: 100%">
+      <ion-row center>
+        <ion-col width-25>Axis</ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decAL()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.axis.l}}
+              </ion-col>
+              <ion-col class="nP">
+                <button (click)="lens.incAL()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decAR()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.axis.r}}
+              </ion-col>
+              <ion-col>
+                <button (click)="lens.incAR()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <!-- BVD -->
+    <ion-card color="lens-dark" style="margin-left:0; margin:right: 0;width: 100%">
+      <ion-row center>
+        <ion-col width-25>BVD</ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decLBVD()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.bvd.l}}
+              </ion-col>
+              <ion-col class="nP">
+                <button (click)="lens.incLBVD()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col>
+          <ion-grid class="nP">
+            <ion-row center>
+              <ion-col class="nP">
+                <button (click)="lens.decRBVD()" clear color="lens-light" clear><ion-icon name="remove"></ion-icon></button>
+              </ion-col>
+              <ion-col class="nP">
+                {{lens.prescription.bvd.r}}
+              </ion-col>
+              <ion-col>
+                <button (click)="lens.incRBVD()" clear color="lens-light" clear><ion-icon name="add"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-footer>
+    <ion-row>
         <ion-col width-80 offset-10>
-          <button (click)="calculate()" style="margin-bottom: 3em" color="lens-dark" ion-button block>Calculate</button>
+          <button (click)="calculateBtn()" style="margin-bottom: 2em" color="lens-light" ion-button block>Calculate</button>
           <hr />
         </ion-col>
       </ion-row>
     </ion-footer>
+
   </ion-grid>
 </ion-content>

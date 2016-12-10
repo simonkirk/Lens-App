@@ -13,7 +13,7 @@ import * as import5 from '@angular/core/src/di/injector';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
-import * as import9 from '../../providers/lens';
+import * as import9 from '../../providers/lens-provider';
 import * as import10 from '@angular/core/src/metadata/view';
 import * as import11 from '@angular/core/src/linker/component_factory';
 import * as import12 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
@@ -21,20 +21,22 @@ import * as import13 from '../../node_modules/ionic-angular/components/navbar/na
 import * as import14 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
 import * as import15 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
 import * as import16 from '../../node_modules/ionic-angular/components/grid/grid.ngfactory';
-import * as import17 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
-import * as import18 from 'ionic-angular/config/config';
-import * as import19 from '@angular/core/src/linker/element_ref';
-import * as import20 from 'ionic-angular/navigation/view-controller';
-import * as import21 from 'ionic-angular/components/app/app';
-import * as import22 from 'ionic-angular/components/toolbar/toolbar';
-import * as import23 from 'ionic-angular/util/keyboard';
-import * as import24 from '@angular/core/src/zone/ng_zone';
-import * as import25 from 'ionic-angular/components/tabs/tabs';
-import * as import26 from 'ionic-angular/components/toolbar/toolbar-title';
-import * as import27 from 'ionic-angular/components/navbar/navbar';
-import * as import28 from 'ionic-angular/components/grid/grid';
-import * as import29 from 'ionic-angular/components/button/button';
-import * as import30 from 'ionic-angular/components/content/content';
+import * as import17 from '../../node_modules/ionic-angular/components/icon/icon.ngfactory';
+import * as import18 from '../../node_modules/ionic-angular/components/card/card.ngfactory';
+import * as import19 from 'ionic-angular/config/config';
+import * as import20 from '@angular/core/src/linker/element_ref';
+import * as import21 from 'ionic-angular/navigation/view-controller';
+import * as import22 from 'ionic-angular/components/app/app';
+import * as import23 from 'ionic-angular/components/toolbar/toolbar';
+import * as import24 from 'ionic-angular/util/keyboard';
+import * as import25 from '@angular/core/src/zone/ng_zone';
+import * as import26 from 'ionic-angular/components/tabs/tabs';
+import * as import27 from 'ionic-angular/components/toolbar/toolbar-title';
+import * as import28 from 'ionic-angular/components/navbar/navbar';
+import * as import29 from 'ionic-angular/components/grid/grid';
+import * as import30 from 'ionic-angular/components/icon/icon';
+import * as import31 from 'ionic-angular/components/card/card';
+import * as import32 from 'ionic-angular/components/content/content';
 export class Wrapper_DailyPage {
   context:import0.DailyPage;
   changed:boolean;
@@ -125,50 +127,120 @@ class _View_DailyPage0 extends import1.AppView<import0.DailyPage> {
   _el_26:any;
   _text_27:any;
   _el_28:any;
-  /*private*/ _appEl_28:import3.AppElement;
-  _Button_28_4:import17.Wrapper_Button;
   _text_29:any;
-  _text_30:any;
-  _el_31:any;
-  /*private*/ _appEl_31:import3.AppElement;
-  _Button_31_4:import17.Wrapper_Button;
+  _el_30:any;
+  _Icon_30_3:import17.Wrapper_Icon;
+  _text_31:any;
   _text_32:any;
-  _text_33:any;
-  _el_34:any;
-  /*private*/ _appEl_34:import3.AppElement;
-  _Button_34_4:import17.Wrapper_Button;
-  _text_35:any;
+  _el_33:any;
+  _Card_33_3:import18.Wrapper_Card;
+  _text_34:any;
+  _el_35:any;
+  _Grid_35_3:import16.Wrapper_Grid;
   _text_36:any;
   _el_37:any;
+  _Row_37_3:import16.Wrapper_Row;
   _text_38:any;
-  _text_39:any;
+  _el_39:any;
+  _Col_39_3:import16.Wrapper_Col;
   _text_40:any;
-  _text_41:any;
+  _el_41:any;
   _text_42:any;
+  _text_43:any;
+  _el_44:any;
+  _Col_44_3:import16.Wrapper_Col;
+  _text_45:any;
+  _el_46:any;
+  _CardHeader_46_3:import18.Wrapper_CardHeader;
+  _text_47:any;
+  _text_48:any;
+  _text_49:any;
+  _text_50:any;
+  _text_51:any;
+  _text_52:any;
+  _el_53:any;
+  _Card_53_3:import18.Wrapper_Card;
+  _text_54:any;
+  _el_55:any;
+  _Grid_55_3:import16.Wrapper_Grid;
+  _text_56:any;
+  _el_57:any;
+  _Row_57_3:import16.Wrapper_Row;
+  _text_58:any;
+  _el_59:any;
+  _Col_59_3:import16.Wrapper_Col;
+  _text_60:any;
+  _el_61:any;
+  _text_62:any;
+  _text_63:any;
+  _el_64:any;
+  _Col_64_3:import16.Wrapper_Col;
+  _text_65:any;
+  _el_66:any;
+  _CardHeader_66_3:import18.Wrapper_CardHeader;
+  _text_67:any;
+  _text_68:any;
+  _text_69:any;
+  _text_70:any;
+  _text_71:any;
+  _text_72:any;
+  _el_73:any;
+  _Card_73_3:import18.Wrapper_Card;
+  _text_74:any;
+  _el_75:any;
+  _Grid_75_3:import16.Wrapper_Grid;
+  _text_76:any;
+  _el_77:any;
+  _Row_77_3:import16.Wrapper_Row;
+  _text_78:any;
+  _el_79:any;
+  _Col_79_3:import16.Wrapper_Col;
+  _text_80:any;
+  _el_81:any;
+  _text_82:any;
+  _text_83:any;
+  _el_84:any;
+  _Col_84_3:import16.Wrapper_Col;
+  _text_85:any;
+  _el_86:any;
+  _CardHeader_86_3:import18.Wrapper_CardHeader;
+  _text_87:any;
+  _text_88:any;
+  _text_89:any;
+  _text_90:any;
+  _text_91:any;
+  _text_92:any;
+  _el_93:any;
+  _text_94:any;
+  _text_95:any;
+  _text_96:any;
+  _text_97:any;
+  _text_98:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
+  /*private*/ _expr_5:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_DailyPage0,renderType_DailyPage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import3.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'ion-header',(null as any));
-    this._Header_0_3 = new import12.Wrapper_Header(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import20.ViewController,(null as any)));
+    this._Header_0_3 = new import12.Wrapper_Header(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import21.ViewController,(null as any)));
     this._text_1 = this.renderer.createText(this._el_0,'\n  ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'ion-navbar',(null as any));
     this.renderer.setElementAttribute(this._el_2,'class','toolbar');
     this.renderer.setElementAttribute(this._el_2,'color','lens-dark');
     this._appEl_2 = new import3.AppElement(2,0,this,this._el_2);
     var compView_2:any = import13.viewFactory_Navbar0(this.viewUtils,this.injector(2),this._appEl_2);
-    this._Navbar_2_4 = new import13.Wrapper_Navbar(this.parentInjector.get(import21.App),this.parentInjector.get(import20.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_2),this.renderer);
+    this._Navbar_2_4 = new import13.Wrapper_Navbar(this.parentInjector.get(import22.App),this.parentInjector.get(import21.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_2),this.renderer);
     this._appEl_2.initComponent(this._Navbar_2_4.context,([] as any[]),compView_2);
     this._text_3 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_4 = this.renderer.createElement((null as any),'ion-title',(null as any));
     this.renderer.setElementAttribute(this._el_4,'text-center','');
     this._appEl_4 = new import3.AppElement(4,2,this,this._el_4);
     var compView_4:any = import14.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
-    this._ToolbarTitle_4_4 = new import14.Wrapper_ToolbarTitle(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import22.Toolbar,(null as any)),this._Navbar_2_4.context);
+    this._ToolbarTitle_4_4 = new import14.Wrapper_ToolbarTitle(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import23.Toolbar,(null as any)),this._Navbar_2_4.context);
     this._appEl_4.initComponent(this._ToolbarTitle_4_4.context,([] as any[]),compView_4);
     this._text_5 = this.renderer.createText((null as any),'\n      iOptom\n    ',(null as any));
     compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([this._text_5])],(null as any));
@@ -193,7 +265,7 @@ class _View_DailyPage0 extends import1.AppView<import0.DailyPage> {
     this.renderer.setElementAttribute(this._el_9,'text-center','');
     this._appEl_9 = new import3.AppElement(9,(null as any),this,this._el_9);
     var compView_9:any = import15.viewFactory_Content0(this.viewUtils,this.injector(9),this._appEl_9);
-    this._Content_9_4 = new import15.Wrapper_Content(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import21.App),this.parentInjector.get(import23.Keyboard),this.parentInjector.get(import24.NgZone),this.parentInjector.get(import20.ViewController,(null as any)),this.parentInjector.get(import25.Tabs,(null as any)));
+    this._Content_9_4 = new import15.Wrapper_Content(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import22.App),this.parentInjector.get(import24.Keyboard),this.parentInjector.get(import25.NgZone),this.parentInjector.get(import21.ViewController,(null as any)),this.parentInjector.get(import26.Tabs,(null as any)));
     this._appEl_9.initComponent(this._Content_9_4.context,([] as any[]),compView_9);
     this._text_10 = this.renderer.createText((null as any),'\n\n  ',(null as any));
     this._el_11 = this.renderer.createElement((null as any),'ion-grid',(null as any));
@@ -204,8 +276,6 @@ class _View_DailyPage0 extends import1.AppView<import0.DailyPage> {
     this._Row_13_3 = new import16.Wrapper_Row();
     this._text_14 = this.renderer.createText(this._el_13,'\n      ',(null as any));
     this._el_15 = this.renderer.createElement(this._el_13,'ion-col',(null as any));
-    this.renderer.setElementAttribute(this._el_15,'offset-10','');
-    this.renderer.setElementAttribute(this._el_15,'width-80','');
     this._Col_15_3 = new import16.Wrapper_Col();
     this._text_16 = this.renderer.createText(this._el_15,'\n        ',(null as any));
     this._el_17 = this.renderer.createElement(this._el_15,'h4',(null as any));
@@ -225,60 +295,132 @@ class _View_DailyPage0 extends import1.AppView<import0.DailyPage> {
     this._text_25 = this.renderer.createText(this._el_24,'\n        ',(null as any));
     this._el_26 = this.renderer.createElement(this._el_24,'hr',(null as any));
     this._text_27 = this.renderer.createText(this._el_24,'\n        ',(null as any));
-    this._el_28 = this.renderer.createElement(this._el_24,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_28,'block','');
-    this.renderer.setElementAttribute(this._el_28,'color','lens-dark');
-    this.renderer.setElementAttribute(this._el_28,'ion-button','');
-    this._appEl_28 = new import3.AppElement(28,24,this,this._el_28);
-    var compView_28:any = import17.viewFactory_Button0(this.viewUtils,this.injector(28),this._appEl_28);
-    this._Button_28_4 = new import17.Wrapper_Button((null as any),'',this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_28),this.renderer);
-    this._appEl_28.initComponent(this._Button_28_4.context,([] as any[]),compView_28);
-    this._text_29 = this.renderer.createText((null as any),'Clarity 1 day',(null as any));
-    compView_28.create(this._Button_28_4.context,[([] as any[]).concat([this._text_29])],(null as any));
-    this._text_30 = this.renderer.createText(this._el_24,'\n        ',(null as any));
-    this._el_31 = this.renderer.createElement(this._el_24,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_31,'block','');
-    this.renderer.setElementAttribute(this._el_31,'color','lens-dark');
-    this.renderer.setElementAttribute(this._el_31,'ion-button','');
-    this._appEl_31 = new import3.AppElement(31,24,this,this._el_31);
-    var compView_31:any = import17.viewFactory_Button0(this.viewUtils,this.injector(31),this._appEl_31);
-    this._Button_31_4 = new import17.Wrapper_Button((null as any),'',this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_31),this.renderer);
-    this._appEl_31.initComponent(this._Button_31_4.context,([] as any[]),compView_31);
-    this._text_32 = this.renderer.createText((null as any),'1 day moist',(null as any));
-    compView_31.create(this._Button_31_4.context,[([] as any[]).concat([this._text_32])],(null as any));
-    this._text_33 = this.renderer.createText(this._el_24,'\n        ',(null as any));
-    this._el_34 = this.renderer.createElement(this._el_24,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_34,'block','');
-    this.renderer.setElementAttribute(this._el_34,'color','lens-dark');
-    this.renderer.setElementAttribute(this._el_34,'ion-button','');
-    this._appEl_34 = new import3.AppElement(34,24,this,this._el_34);
-    var compView_34:any = import17.viewFactory_Button0(this.viewUtils,this.injector(34),this._appEl_34);
-    this._Button_34_4 = new import17.Wrapper_Button((null as any),'',this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_34),this.renderer);
-    this._appEl_34.initComponent(this._Button_34_4.context,([] as any[]),compView_34);
-    this._text_35 = this.renderer.createText((null as any),'Proclear 1 day',(null as any));
-    compView_34.create(this._Button_34_4.context,[([] as any[]).concat([this._text_35])],(null as any));
-    this._text_36 = this.renderer.createText(this._el_24,'\n        ',(null as any));
-    this._el_37 = this.renderer.createElement(this._el_24,'hr',(null as any));
-    this._text_38 = this.renderer.createText(this._el_24,'\n      ',(null as any));
-    this._text_39 = this.renderer.createText(this._el_22,'\n    ',(null as any));
-    this._text_40 = this.renderer.createText(this._el_11,'\n  ',(null as any));
-    this._text_41 = this.renderer.createText((null as any),'\n',(null as any));
+    this._el_28 = this.renderer.createElement(this._el_24,'h4',(null as any));
+    this._text_29 = this.renderer.createText(this._el_28,'Sort lenses ',(null as any));
+    this._el_30 = this.renderer.createElement(this._el_28,'ion-icon',(null as any));
+    this.renderer.setElementAttribute(this._el_30,'name','funnel');
+    this.renderer.setElementAttribute(this._el_30,'role','img');
+    this._Icon_30_3 = new import17.Wrapper_Icon(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_30),this.renderer);
+    this._text_31 = this.renderer.createText(this._el_24,'\n        ',(null as any));
+    this._text_32 = this.renderer.createText(this._el_24,'\n        ',(null as any));
+    this._el_33 = this.renderer.createElement(this._el_24,'ion-card',(null as any));
+    this.renderer.setElementAttribute(this._el_33,'color','lens-dark');
+    this._Card_33_3 = new import18.Wrapper_Card(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_33),this.renderer);
+    this._text_34 = this.renderer.createText(this._el_33,'\n          ',(null as any));
+    this._el_35 = this.renderer.createElement(this._el_33,'ion-grid',(null as any));
+    this._Grid_35_3 = new import16.Wrapper_Grid();
+    this._text_36 = this.renderer.createText(this._el_35,'\n            ',(null as any));
+    this._el_37 = this.renderer.createElement(this._el_35,'ion-row',(null as any));
+    this._Row_37_3 = new import16.Wrapper_Row();
+    this._text_38 = this.renderer.createText(this._el_37,'\n              ',(null as any));
+    this._el_39 = this.renderer.createElement(this._el_37,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_39,'center','');
+    this.renderer.setElementAttribute(this._el_39,'width-25','');
+    this._Col_39_3 = new import16.Wrapper_Col();
+    this._text_40 = this.renderer.createText(this._el_39,'\n                ',(null as any));
+    this._el_41 = this.renderer.createElement(this._el_39,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_41,'src','assets/images/lens.png');
+    this._text_42 = this.renderer.createText(this._el_39,'\n              ',(null as any));
+    this._text_43 = this.renderer.createText(this._el_37,'\n              ',(null as any));
+    this._el_44 = this.renderer.createElement(this._el_37,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_44,'center','');
+    this.renderer.setElementAttribute(this._el_44,'text-left','');
+    this._Col_44_3 = new import16.Wrapper_Col();
+    this._text_45 = this.renderer.createText(this._el_44,'\n                ',(null as any));
+    this._el_46 = this.renderer.createElement(this._el_44,'ion-card-header',(null as any));
+    this._CardHeader_46_3 = new import18.Wrapper_CardHeader(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_46),this.renderer);
+    this._text_47 = this.renderer.createText(this._el_46,' Clarity 1 day ',(null as any));
+    this._text_48 = this.renderer.createText(this._el_44,'\n              ',(null as any));
+    this._text_49 = this.renderer.createText(this._el_37,'\n            ',(null as any));
+    this._text_50 = this.renderer.createText(this._el_35,'\n          ',(null as any));
+    this._text_51 = this.renderer.createText(this._el_33,'\n        ',(null as any));
+    this._text_52 = this.renderer.createText(this._el_24,'\n        ',(null as any));
+    this._el_53 = this.renderer.createElement(this._el_24,'ion-card',(null as any));
+    this.renderer.setElementAttribute(this._el_53,'color','lens-dark');
+    this._Card_53_3 = new import18.Wrapper_Card(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_53),this.renderer);
+    this._text_54 = this.renderer.createText(this._el_53,'\n          ',(null as any));
+    this._el_55 = this.renderer.createElement(this._el_53,'ion-grid',(null as any));
+    this._Grid_55_3 = new import16.Wrapper_Grid();
+    this._text_56 = this.renderer.createText(this._el_55,'\n            ',(null as any));
+    this._el_57 = this.renderer.createElement(this._el_55,'ion-row',(null as any));
+    this._Row_57_3 = new import16.Wrapper_Row();
+    this._text_58 = this.renderer.createText(this._el_57,'\n              ',(null as any));
+    this._el_59 = this.renderer.createElement(this._el_57,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_59,'center','');
+    this.renderer.setElementAttribute(this._el_59,'width-25','');
+    this._Col_59_3 = new import16.Wrapper_Col();
+    this._text_60 = this.renderer.createText(this._el_59,'\n                ',(null as any));
+    this._el_61 = this.renderer.createElement(this._el_59,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_61,'src','assets/images/lens.png');
+    this._text_62 = this.renderer.createText(this._el_59,'\n              ',(null as any));
+    this._text_63 = this.renderer.createText(this._el_57,'\n              ',(null as any));
+    this._el_64 = this.renderer.createElement(this._el_57,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_64,'center','');
+    this.renderer.setElementAttribute(this._el_64,'text-left','');
+    this._Col_64_3 = new import16.Wrapper_Col();
+    this._text_65 = this.renderer.createText(this._el_64,'\n                ',(null as any));
+    this._el_66 = this.renderer.createElement(this._el_64,'ion-card-header',(null as any));
+    this._CardHeader_66_3 = new import18.Wrapper_CardHeader(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_66),this.renderer);
+    this._text_67 = this.renderer.createText(this._el_66,' 1 day moist ',(null as any));
+    this._text_68 = this.renderer.createText(this._el_64,'\n              ',(null as any));
+    this._text_69 = this.renderer.createText(this._el_57,'\n            ',(null as any));
+    this._text_70 = this.renderer.createText(this._el_55,'\n          ',(null as any));
+    this._text_71 = this.renderer.createText(this._el_53,'\n        ',(null as any));
+    this._text_72 = this.renderer.createText(this._el_24,'\n        ',(null as any));
+    this._el_73 = this.renderer.createElement(this._el_24,'ion-card',(null as any));
+    this.renderer.setElementAttribute(this._el_73,'color','lens-dark');
+    this._Card_73_3 = new import18.Wrapper_Card(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_73),this.renderer);
+    this._text_74 = this.renderer.createText(this._el_73,'\n          ',(null as any));
+    this._el_75 = this.renderer.createElement(this._el_73,'ion-grid',(null as any));
+    this._Grid_75_3 = new import16.Wrapper_Grid();
+    this._text_76 = this.renderer.createText(this._el_75,'\n            ',(null as any));
+    this._el_77 = this.renderer.createElement(this._el_75,'ion-row',(null as any));
+    this._Row_77_3 = new import16.Wrapper_Row();
+    this._text_78 = this.renderer.createText(this._el_77,'\n              ',(null as any));
+    this._el_79 = this.renderer.createElement(this._el_77,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_79,'center','');
+    this.renderer.setElementAttribute(this._el_79,'width-25','');
+    this._Col_79_3 = new import16.Wrapper_Col();
+    this._text_80 = this.renderer.createText(this._el_79,'\n                ',(null as any));
+    this._el_81 = this.renderer.createElement(this._el_79,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_81,'src','assets/images/lens.png');
+    this._text_82 = this.renderer.createText(this._el_79,'\n              ',(null as any));
+    this._text_83 = this.renderer.createText(this._el_77,'\n              ',(null as any));
+    this._el_84 = this.renderer.createElement(this._el_77,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_84,'center','');
+    this.renderer.setElementAttribute(this._el_84,'text-left','');
+    this._Col_84_3 = new import16.Wrapper_Col();
+    this._text_85 = this.renderer.createText(this._el_84,'\n                ',(null as any));
+    this._el_86 = this.renderer.createElement(this._el_84,'ion-card-header',(null as any));
+    this._CardHeader_86_3 = new import18.Wrapper_CardHeader(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_86),this.renderer);
+    this._text_87 = this.renderer.createText(this._el_86,' Proclear 1 day ',(null as any));
+    this._text_88 = this.renderer.createText(this._el_84,'\n              ',(null as any));
+    this._text_89 = this.renderer.createText(this._el_77,'\n            ',(null as any));
+    this._text_90 = this.renderer.createText(this._el_75,'\n          ',(null as any));
+    this._text_91 = this.renderer.createText(this._el_73,'\n        ',(null as any));
+    this._text_92 = this.renderer.createText(this._el_24,'\n        ',(null as any));
+    this._el_93 = this.renderer.createElement(this._el_24,'hr',(null as any));
+    this._text_94 = this.renderer.createText(this._el_24,'\n      ',(null as any));
+    this._text_95 = this.renderer.createText(this._el_22,'\n    ',(null as any));
+    this._text_96 = this.renderer.createText(this._el_11,'\n  ',(null as any));
+    this._text_97 = this.renderer.createText((null as any),'\n',(null as any));
     compView_9.create(this._Content_9_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
         this._text_10,
         this._el_11,
-        this._text_41
+        this._text_97
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
-    this._text_42 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_98 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
     this._expr_3 = import7.UNINITIALIZED;
-    var disposable_0:Function = this.renderer.listen(this._el_28,'click',this.eventHandler(this._handle_click_28_0.bind(this)));
+    this._expr_5 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_33,'click',this.eventHandler(this._handle_click_33_0.bind(this)));
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -310,36 +452,108 @@ class _View_DailyPage0 extends import1.AppView<import0.DailyPage> {
       this._text_27,
       this._el_28,
       this._text_29,
-      this._text_30,
-      this._el_31,
+      this._el_30,
+      this._text_31,
       this._text_32,
-      this._text_33,
-      this._el_34,
-      this._text_35,
+      this._el_33,
+      this._text_34,
+      this._el_35,
       this._text_36,
       this._el_37,
       this._text_38,
-      this._text_39,
+      this._el_39,
       this._text_40,
-      this._text_41,
-      this._text_42
+      this._el_41,
+      this._text_42,
+      this._text_43,
+      this._el_44,
+      this._text_45,
+      this._el_46,
+      this._text_47,
+      this._text_48,
+      this._text_49,
+      this._text_50,
+      this._text_51,
+      this._text_52,
+      this._el_53,
+      this._text_54,
+      this._el_55,
+      this._text_56,
+      this._el_57,
+      this._text_58,
+      this._el_59,
+      this._text_60,
+      this._el_61,
+      this._text_62,
+      this._text_63,
+      this._el_64,
+      this._text_65,
+      this._el_66,
+      this._text_67,
+      this._text_68,
+      this._text_69,
+      this._text_70,
+      this._text_71,
+      this._text_72,
+      this._el_73,
+      this._text_74,
+      this._el_75,
+      this._text_76,
+      this._el_77,
+      this._text_78,
+      this._el_79,
+      this._text_80,
+      this._el_81,
+      this._text_82,
+      this._text_83,
+      this._el_84,
+      this._text_85,
+      this._el_86,
+      this._text_87,
+      this._text_88,
+      this._text_89,
+      this._text_90,
+      this._text_91,
+      this._text_92,
+      this._el_93,
+      this._text_94,
+      this._text_95,
+      this._text_96,
+      this._text_97,
+      this._text_98
     ]
     ,[disposable_0],([] as any[]));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import26.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
-    if (((token === import27.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
-    if (((token === import22.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
-    if (((token === import28.Col) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 19)))) { return this._Col_15_3.context; }
-    if (((token === import28.Row) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 20)))) { return this._Row_13_3.context; }
-    if (((token === import29.Button) && ((28 <= requestNodeIndex) && (requestNodeIndex <= 29)))) { return this._Button_28_4.context; }
-    if (((token === import29.Button) && ((31 <= requestNodeIndex) && (requestNodeIndex <= 32)))) { return this._Button_31_4.context; }
-    if (((token === import29.Button) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 35)))) { return this._Button_34_4.context; }
-    if (((token === import28.Col) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._Col_24_3.context; }
-    if (((token === import28.Row) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 39)))) { return this._Row_22_3.context; }
-    if (((token === import28.Grid) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 40)))) { return this._Grid_11_3.context; }
-    if (((token === import30.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 41)))) { return this._Content_9_4.context; }
+    if (((token === import27.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
+    if (((token === import28.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
+    if (((token === import23.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
+    if (((token === import29.Col) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 19)))) { return this._Col_15_3.context; }
+    if (((token === import29.Row) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 20)))) { return this._Row_13_3.context; }
+    if (((token === import30.Icon) && (30 === requestNodeIndex))) { return this._Icon_30_3.context; }
+    if (((token === import29.Col) && ((39 <= requestNodeIndex) && (requestNodeIndex <= 42)))) { return this._Col_39_3.context; }
+    if (((token === import31.CardHeader) && ((46 <= requestNodeIndex) && (requestNodeIndex <= 47)))) { return this._CardHeader_46_3.context; }
+    if (((token === import29.Col) && ((44 <= requestNodeIndex) && (requestNodeIndex <= 48)))) { return this._Col_44_3.context; }
+    if (((token === import29.Row) && ((37 <= requestNodeIndex) && (requestNodeIndex <= 49)))) { return this._Row_37_3.context; }
+    if (((token === import29.Grid) && ((35 <= requestNodeIndex) && (requestNodeIndex <= 50)))) { return this._Grid_35_3.context; }
+    if (((token === import31.Card) && ((33 <= requestNodeIndex) && (requestNodeIndex <= 51)))) { return this._Card_33_3.context; }
+    if (((token === import29.Col) && ((59 <= requestNodeIndex) && (requestNodeIndex <= 62)))) { return this._Col_59_3.context; }
+    if (((token === import31.CardHeader) && ((66 <= requestNodeIndex) && (requestNodeIndex <= 67)))) { return this._CardHeader_66_3.context; }
+    if (((token === import29.Col) && ((64 <= requestNodeIndex) && (requestNodeIndex <= 68)))) { return this._Col_64_3.context; }
+    if (((token === import29.Row) && ((57 <= requestNodeIndex) && (requestNodeIndex <= 69)))) { return this._Row_57_3.context; }
+    if (((token === import29.Grid) && ((55 <= requestNodeIndex) && (requestNodeIndex <= 70)))) { return this._Grid_55_3.context; }
+    if (((token === import31.Card) && ((53 <= requestNodeIndex) && (requestNodeIndex <= 71)))) { return this._Card_53_3.context; }
+    if (((token === import29.Col) && ((79 <= requestNodeIndex) && (requestNodeIndex <= 82)))) { return this._Col_79_3.context; }
+    if (((token === import31.CardHeader) && ((86 <= requestNodeIndex) && (requestNodeIndex <= 87)))) { return this._CardHeader_86_3.context; }
+    if (((token === import29.Col) && ((84 <= requestNodeIndex) && (requestNodeIndex <= 88)))) { return this._Col_84_3.context; }
+    if (((token === import29.Row) && ((77 <= requestNodeIndex) && (requestNodeIndex <= 89)))) { return this._Row_77_3.context; }
+    if (((token === import29.Grid) && ((75 <= requestNodeIndex) && (requestNodeIndex <= 90)))) { return this._Grid_75_3.context; }
+    if (((token === import31.Card) && ((73 <= requestNodeIndex) && (requestNodeIndex <= 91)))) { return this._Card_73_3.context; }
+    if (((token === import29.Col) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 94)))) { return this._Col_24_3.context; }
+    if (((token === import29.Row) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 95)))) { return this._Row_22_3.context; }
+    if (((token === import29.Grid) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 96)))) { return this._Grid_11_3.context; }
+    if (((token === import32.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 97)))) { return this._Content_9_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -354,27 +568,34 @@ class _View_DailyPage0 extends import1.AppView<import0.DailyPage> {
     this._Col_15_3.detectChangesInternal(this,this._el_15,throwOnChange);
     this._Row_22_3.detectChangesInternal(this,this._el_22,throwOnChange);
     this._Col_24_3.detectChangesInternal(this,this._el_24,throwOnChange);
-    const currVal_5:any = '';
-    this._Button_28_4.check_block(currVal_5,throwOnChange,false);
-    const currVal_6:any = 'lens-dark';
-    this._Button_28_4.check_color(currVal_6,throwOnChange,false);
-    if (this._Button_28_4.detectChangesInternal(this,this._el_28,throwOnChange)) { this._appEl_28.componentView.markAsCheckOnce(); }
-    const currVal_7:any = '';
-    this._Button_31_4.check_block(currVal_7,throwOnChange,false);
+    const currVal_4:any = 'funnel';
+    this._Icon_30_3.check_name(currVal_4,throwOnChange,false);
+    this._Icon_30_3.detectChangesInternal(this,this._el_30,throwOnChange);
+    const currVal_7:any = 'lens-dark';
+    this._Card_33_3.check_color(currVal_7,throwOnChange,false);
+    this._Card_33_3.detectChangesInternal(this,this._el_33,throwOnChange);
+    this._Grid_35_3.detectChangesInternal(this,this._el_35,throwOnChange);
+    this._Row_37_3.detectChangesInternal(this,this._el_37,throwOnChange);
+    this._Col_39_3.detectChangesInternal(this,this._el_39,throwOnChange);
+    this._Col_44_3.detectChangesInternal(this,this._el_44,throwOnChange);
+    this._CardHeader_46_3.detectChangesInternal(this,this._el_46,throwOnChange);
     const currVal_8:any = 'lens-dark';
-    this._Button_31_4.check_color(currVal_8,throwOnChange,false);
-    if (this._Button_31_4.detectChangesInternal(this,this._el_31,throwOnChange)) { this._appEl_31.componentView.markAsCheckOnce(); }
-    const currVal_9:any = '';
-    this._Button_34_4.check_block(currVal_9,throwOnChange,false);
-    const currVal_10:any = 'lens-dark';
-    this._Button_34_4.check_color(currVal_10,throwOnChange,false);
-    if (this._Button_34_4.detectChangesInternal(this,this._el_34,throwOnChange)) { this._appEl_34.componentView.markAsCheckOnce(); }
+    this._Card_53_3.check_color(currVal_8,throwOnChange,false);
+    this._Card_53_3.detectChangesInternal(this,this._el_53,throwOnChange);
+    this._Grid_55_3.detectChangesInternal(this,this._el_55,throwOnChange);
+    this._Row_57_3.detectChangesInternal(this,this._el_57,throwOnChange);
+    this._Col_59_3.detectChangesInternal(this,this._el_59,throwOnChange);
+    this._Col_64_3.detectChangesInternal(this,this._el_64,throwOnChange);
+    this._CardHeader_66_3.detectChangesInternal(this,this._el_66,throwOnChange);
+    const currVal_9:any = 'lens-dark';
+    this._Card_73_3.check_color(currVal_9,throwOnChange,false);
+    this._Card_73_3.detectChangesInternal(this,this._el_73,throwOnChange);
+    this._Grid_75_3.detectChangesInternal(this,this._el_75,throwOnChange);
+    this._Row_77_3.detectChangesInternal(this,this._el_77,throwOnChange);
+    this._Col_79_3.detectChangesInternal(this,this._el_79,throwOnChange);
+    this._Col_84_3.detectChangesInternal(this,this._el_84,throwOnChange);
+    this._CardHeader_86_3.detectChangesInternal(this,this._el_86,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
-    if (!throwOnChange) {
-      if ((this.numberOfChecks === 0)) { this._Button_28_4.context.ngAfterContentInit(); }
-      if ((this.numberOfChecks === 0)) { this._Button_31_4.context.ngAfterContentInit(); }
-      if ((this.numberOfChecks === 0)) { this._Button_34_4.context.ngAfterContentInit(); }
-    }
     const currVal_1:any = this._Navbar_2_4.context._hidden;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
       this.renderer.setElementProperty(this._el_2,'hidden',currVal_1);
@@ -390,13 +611,19 @@ class _View_DailyPage0 extends import1.AppView<import0.DailyPage> {
       this.renderer.setElementClass(this._el_9,'statusbar-padding',currVal_3);
       this._expr_3 = currVal_3;
     }
+    const currVal_5:any = this._Icon_30_3.context._hidden;
+    if (import4.checkBinding(throwOnChange,this._expr_5,currVal_5)) {
+      this.renderer.setElementClass(this._el_30,'hide',currVal_5);
+      this._expr_5 = currVal_5;
+    }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Navbar_2_4.context.ngAfterViewInit(); } }
   }
   destroyInternal():void {
+    this._Icon_30_3.context.ngOnDestroy();
     this._Content_9_4.context.ngOnDestroy();
   }
-  private _handle_click_28_0($event:any):boolean {
+  private _handle_click_33_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.clarity1day()) !== false);
     return (true && pd_0);

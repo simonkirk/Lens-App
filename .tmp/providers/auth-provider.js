@@ -14,7 +14,7 @@ export var AuthProvider = (function () {
     AuthProvider.prototype.login = function (username, password) {
         var headers = new Headers({ 'Content-Type': 'application/json' });
         var options = new RequestOptions({ headers: headers });
-        return this.http.post('http://5.56.125.168/login', { username: username }, options).map(function (res) { return res.json(); });
+        return this.http.post('http://zolotoypavlin.com:3000/login', { username: username }, options).map(function (res) { return res.json(); });
     };
     AuthProvider.prototype.logout = function () {
         window.localStorage.removeItem('username');

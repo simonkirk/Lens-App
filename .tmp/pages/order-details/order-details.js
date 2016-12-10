@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
+import { LensProvider } from '../../providers/lens-provider';
 /*
   Generated class for the OrderDetails page.
 
@@ -8,9 +8,9 @@ import { LensProvider } from '../../providers/lens';
   Ionic pages and navigation.
 */
 export var OrderDetailsPage = (function () {
-    function OrderDetailsPage(navCtrl, pLens) {
+    function OrderDetailsPage(navCtrl, lens) {
         this.navCtrl = navCtrl;
-        this.pLens = pLens;
+        this.lens = lens;
     }
     OrderDetailsPage.prototype.ionViewDidLoad = function () { };
     OrderDetailsPage.decorators = [

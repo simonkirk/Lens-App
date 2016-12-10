@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LensProvider } from '../../providers/lens';
-import { ConfirmationPage } from '../confirmation/confirmation';
+import { LensProvider } from '../../providers/lens-provider';
+import { SearchResultPage } from '../search-result/search-result';
 /*
   Generated class for the Daily page.
 
@@ -9,14 +9,14 @@ import { ConfirmationPage } from '../confirmation/confirmation';
   Ionic pages and navigation.
 */
 export var DailyPage = (function () {
-    function DailyPage(navCtrl, pLens) {
+    function DailyPage(navCtrl, lens) {
         this.navCtrl = navCtrl;
-        this.pLens = pLens;
+        this.lens = lens;
     }
     DailyPage.prototype.ionViewDidLoad = function () { };
     DailyPage.prototype.clarity1day = function () {
-        this.pLens.setDailyDisponsableOptions('clarity1day');
-        this.navCtrl.push(ConfirmationPage);
+        this.lens.dailyDisponsableOptions = 'Clarity 1 day';
+        this.navCtrl.push(SearchResultPage);
     };
     DailyPage.decorators = [
         { type: Component, args: [{
