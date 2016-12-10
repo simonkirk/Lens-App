@@ -218,12 +218,10 @@ class _View_ReferalPage0 extends import1.AppView<import0.ReferalPage> {
     this._appEl_9.initComponent(this._Content_9_4.context,([] as any[]),compView_9);
     this._text_10 = this.renderer.createText((null as any),'\n  ',(null as any));
     this._el_11 = this.renderer.createElement((null as any),'ion-grid',(null as any));
-    this.renderer.setElementAttribute(this._el_11,'style','height: 100%');
     this._Grid_11_3 = new import16.Wrapper_Grid();
     this._text_12 = this.renderer.createText(this._el_11,'\n    ',(null as any));
     this._el_13 = this.renderer.createElement(this._el_11,'ion-row',(null as any));
     this.renderer.setElementAttribute(this._el_13,'center','');
-    this.renderer.setElementAttribute(this._el_13,'class','buttons-vertical');
     this._Row_13_3 = new import16.Wrapper_Row();
     this._text_14 = this.renderer.createText(this._el_13,'\n      ',(null as any));
     this._el_15 = this.renderer.createElement(this._el_13,'ion-col',(null as any));

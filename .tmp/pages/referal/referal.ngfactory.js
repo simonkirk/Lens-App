@@ -152,12 +152,10 @@ var _View_ReferalPage0 = (function (_super) {
         this._appEl_9.initComponent(this._Content_9_4.context, [], compView_9);
         this._text_10 = this.renderer.createText(null, '\n  ', null);
         this._el_11 = this.renderer.createElement(null, 'ion-grid', null);
-        this.renderer.setElementAttribute(this._el_11, 'style', 'height: 100%');
         this._Grid_11_3 = new import16.Wrapper_Grid();
         this._text_12 = this.renderer.createText(this._el_11, '\n    ', null);
         this._el_13 = this.renderer.createElement(this._el_11, 'ion-row', null);
         this.renderer.setElementAttribute(this._el_13, 'center', '');
-        this.renderer.setElementAttribute(this._el_13, 'class', 'buttons-vertical');
         this._Row_13_3 = new import16.Wrapper_Row();
         this._text_14 = this.renderer.createText(this._el_13, '\n      ', null);
         this._el_15 = this.renderer.createElement(this._el_13, 'ion-col', null);
